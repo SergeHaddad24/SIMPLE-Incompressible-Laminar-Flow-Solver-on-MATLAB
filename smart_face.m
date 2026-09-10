@@ -1,26 +1,24 @@
 function phi_f = smart_face(phiU,phiC,phiD)
 
 eps0 = 1e-14;
-den = phiC - phiD;
+den = phiD - phiU;
 
 if abs(den) < eps0
     phi_f = phiC;
     return
 end
 
-phihatU = (phiU - phiD)/den;
+phihatC = (phiC - phiU)/den;
 
-if phihatU <= 0
-    phihatF = 0;
-elseif phihatU <= 1/6
-    phihatF = 3*phihatU;
-elseif phihatU <= 5/6
-    phihatF = (3/8)*(2*phihatU + 1);
-elseif phihatU <= 1
-    phihatF = 1;
+if phihatC <= 0 || phihatC >= 1
+    phihatF = phihatC;
+elseif phihatC < 1/6
+    phihatF = 3*phihatC;
+elseif phihatC < 5/6
+    phihatF = (3/8)*(2*phihatC + 1);
 else
-    phihatF = phihatU;
+    phihatF = 1;
 end
 
-phi_f = phihatF*(phiC - phiD) + phiD;
+phi_f = phihatF*den + phiU;
 end
