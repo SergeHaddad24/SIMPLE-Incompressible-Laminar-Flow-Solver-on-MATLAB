@@ -82,7 +82,6 @@ for iterSIMPLE = 1:maxSIMPLE
     Fw=Fw_new;
     Fn=Fn_new;
     Fs=Fs_new;
-    [u,v] = apply_velocity_BC(u,v,m,n);
     Fe(Nx,:) = 0;
     Fs(:,1)  = 0;
     Fw(1,pressure_exit+1:Ny) = 0;
