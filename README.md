@@ -44,3 +44,17 @@ Continuity residual reaches 10⁻⁶; mass imbalance is 0.002% on the 80 × 40 g
 ![](speed_80x40.png)
 
  |
+
+## Comparison with reference solution
+
+| Reference | This solver |
+|:---:|:---:|
+| 
+
+![](reference.png)
+
+ | 
+
+![](speed_80x40.png)
+
+ |
