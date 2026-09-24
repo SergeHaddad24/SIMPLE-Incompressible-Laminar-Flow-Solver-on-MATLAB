@@ -1,4 +1,5 @@
 Run the solver in the main_RUN_HERE.m script.
+This geometry is discretized using a Cartesian mesh, so non orthogonal correction is commented out.
 ## Results (80 × 40 grid)
 
 
